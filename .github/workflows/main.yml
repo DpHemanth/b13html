@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Chcekout code
+    - name: Checkout code
       uses: actions/checkout@v5
 
     - name: Copy code to EC2
@@ -30,7 +30,7 @@ jobs:
         username: ${{ secrets.EC2_USERNAME }}
         key: ${{ secrets.EC2_SSH_KEY }}
         port: 22
-        script:
+        script: |
           ls -al
           whoami
           pwd
