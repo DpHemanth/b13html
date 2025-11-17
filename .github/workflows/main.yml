@@ -22,6 +22,7 @@ jobs:
           port: 22
           source: ./
           target: ./
+          
     - name: Copy files to /var/www/html
       uses: appleboy/scp-action@v1
       with:
